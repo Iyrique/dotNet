@@ -23,8 +23,8 @@ namespace Task1
         public MainWindow()
         {
             InitializeComponent();
-           
-            
+            StudentViewModel student = new StudentViewModel();
+            this.StudentInfo.Text = student.PrintInfo();
             
         }
 

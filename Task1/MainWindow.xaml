@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="StudentInfo" HorizontalAlignment="Center" Margin="222,10,212,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" Width="358" Height="43" TextAlignment="Center"/>
+        <TextBlock x:Name="StudentInfo" HorizontalAlignment="Center" Margin="126,10,118,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16" Width="548" Height="43" TextAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </Window>

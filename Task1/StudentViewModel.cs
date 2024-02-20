@@ -8,11 +8,11 @@ namespace Task1
 {
     class StudentViewModel
     {
-        private Student student = new Student("Voronezhskiy", "Nikita", new DateTime(2003, 8, 11), 3, "10.1");
+        private Student student = new Student("Voronezhskiy", "Nikita", new DateTime(2003, 08, 11), 3, "10.1");
 
         public string PrintInfo()
         {
-            return $"Name: {student.LastName} {student.FirstName}, Birthday: {student.DateOfBirthday.Date}, Course: {student.Course}, Group: {student.Group}";
+            return $"Name: {student.LastName} {student.FirstName}, Birthday: {student.DateOfBirthday.ToString("dd.MM.yyyy")}, Course: {student.Course}, Group: {student.Group}";
         }
          
     }
