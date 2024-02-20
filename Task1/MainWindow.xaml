@@ -8,5 +8,13 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock x:Name="StudentInfo" HorizontalAlignment="Center" Margin="126,10,118,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16" Width="548" Height="43" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="27" Margin="59,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="27" Margin="248,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Course" HorizontalAlignment="Left" Height="27" Margin="433,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.448"/>
+        <TextBox x:Name="Group" HorizontalAlignment="Left" Height="27" Margin="620,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="LastNameButton" Content="Change lastname" HorizontalAlignment="Left" Margin="59,83,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.489,0.4" Click="LastNameButton_Click" Height="23"/>
+        <Button x:Name="FirstNameButton" Content="Change firstname" HorizontalAlignment="Left" Margin="248,83,0,0" VerticalAlignment="Top" Width="120" Click="FirstNameButton_Click" Height="23"/>
+        <Button x:Name="CourseButton" Content="Change course" HorizontalAlignment="Left" Margin="433,83,0,0" VerticalAlignment="Top" Width="120" Click="CourseButton_Click" Height="23"/>
+        <Button x:Name="GroupButton" Content="Change group" HorizontalAlignment="Left" Margin="620,83,0,0" VerticalAlignment="Top" Width="120" Click="GroupButton_Click" Height="23"/>
     </Grid>
 </Window>

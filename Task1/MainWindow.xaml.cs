@@ -20,14 +20,53 @@ namespace Task1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private StudentViewModel student = new StudentViewModel();
+        
+
         public MainWindow()
         {
             InitializeComponent();
-            StudentViewModel student = new StudentViewModel();
-            this.StudentInfo.Text = student.PrintInfo();
+            UpdateStudentInfo();
+            LastName.Text = student.GetLastName();
+            FirstName.Text = student.GetFirstName();
+            Course.Text = student.GetCourse().ToString();
+            Group.Text = student.GetGroup();
             
         }
 
-        
+        private void UpdateStudentInfo()
+        {
+            StudentInfo.Text = student.PrintInfo();
+        }
+
+
+        private void LastNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            string userInput = LastName.Text;
+            student.SetLastName(userInput);
+            UpdateStudentInfo();
+        }
+
+        private void FirstNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            string userInput = FirstName.Text;
+            student.SetFirstName(userInput);
+            UpdateStudentInfo();
+        }
+
+        private void CourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            int userInput = int.Parse(Course.Text);
+            student.SetCourse(userInput);
+            UpdateStudentInfo();
+        }
+
+        private void GroupButton_Click(object sender, RoutedEventArgs e)
+        {
+            string userInput = Group.Text;
+            student.SetGroup(userInput);
+            UpdateStudentInfo();
+        }
     }
 }
