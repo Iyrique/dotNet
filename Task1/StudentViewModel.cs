@@ -35,7 +35,17 @@ namespace Task1
             return student.Group;
         }
 
+        public DateTime GetDate()
+        {
+            return student.DateOfBirthday;
+        }
+
         public void SetLastName(string lastName)
+        {
+            student.LastName = lastName;
+        }
+
+        public void SetDate(string lastName)
         {
             student.LastName = lastName;
         }
@@ -53,6 +63,11 @@ namespace Task1
         public void SetGroup(string group)
         {
             student.Group = group;
+        }
+
+        public void SetDate(DateTime dateTime)
+        {
+            student.DateOfBirthday = dateTime;
         }
     }
 }

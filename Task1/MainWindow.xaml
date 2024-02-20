@@ -6,15 +6,23 @@
         xmlns:local="clr-namespace:Task1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBlock x:Name="StudentInfo" HorizontalAlignment="Center" Margin="126,10,118,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16" Width="548" Height="43" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="27" Margin="59,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="27" Margin="248,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Course" HorizontalAlignment="Left" Height="27" Margin="433,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.448"/>
-        <TextBox x:Name="Group" HorizontalAlignment="Left" Height="27" Margin="620,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="LastNameButton" Content="Change lastname" HorizontalAlignment="Left" Margin="59,83,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.489,0.4" Click="LastNameButton_Click" Height="23"/>
-        <Button x:Name="FirstNameButton" Content="Change firstname" HorizontalAlignment="Left" Margin="248,83,0,0" VerticalAlignment="Top" Width="120" Click="FirstNameButton_Click" Height="23"/>
-        <Button x:Name="CourseButton" Content="Change course" HorizontalAlignment="Left" Margin="433,83,0,0" VerticalAlignment="Top" Width="120" Click="CourseButton_Click" Height="23"/>
-        <Button x:Name="GroupButton" Content="Change group" HorizontalAlignment="Left" Margin="620,83,0,0" VerticalAlignment="Top" Width="120" Click="GroupButton_Click" Height="23"/>
+    <Grid Margin="2,0,0,0">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="119*"/>
+
+
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="StudentInfo" HorizontalAlignment="Center" Margin="124,10,118,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16" Width="548" Height="43" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="LastName" Height="27" Margin="30,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left"/>
+        <TextBox x:Name="FirstName" Height="27" Margin="181,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left"/>
+        <TextBox x:Name="Course" Height="27" Margin="334,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,0.448" HorizontalAlignment="Left"/>
+        <TextBox x:Name="Group" Height="27" Margin="484,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left"/>
+        <Button x:Name="LastNameButton" Content="Change lastname" Margin="30,95,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.489,0.4" Click="LastNameButton_Click" Height="23" HorizontalAlignment="Left"/>
+        <Button x:Name="FirstNameButton" Content="Change firstname" Margin="181,95,0,0" VerticalAlignment="Top" Width="120" Click="FirstNameButton_Click" Height="23" HorizontalAlignment="Left"/>
+        <Button x:Name="CourseButton" Content="Change course" Margin="334,95,0,0" VerticalAlignment="Top" Width="120" Click="CourseButton_Click" Height="23" HorizontalAlignment="Left"/>
+        <Button x:Name="GroupButton" Content="Change group" Margin="484,95,0,0" VerticalAlignment="Top" Width="120" Click="GroupButton_Click" Height="23" HorizontalAlignment="Left"/>
+        <DatePicker x:Name="Date" Margin="634,62,0,0" VerticalAlignment="Top" IsTodayHighlighted="True" SelectedDateFormat="Long" Width="120" Height="27" HorizontalAlignment="Left"/>
+        <Button x:Name="DateButton" Content="Change birthday" Margin="634,95,0,0" VerticalAlignment="Top" Width="120" Click="DateButton_Click" Height="23" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

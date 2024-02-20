@@ -32,7 +32,7 @@ namespace Task1
             FirstName.Text = student.GetFirstName();
             Course.Text = student.GetCourse().ToString();
             Group.Text = student.GetGroup();
-            
+            Date.SelectedDate = student.GetDate();
         }
 
         private void UpdateStudentInfo()
@@ -66,6 +66,13 @@ namespace Task1
         {
             string userInput = Group.Text;
             student.SetGroup(userInput);
+            UpdateStudentInfo();
+        }
+
+        private void DateButton_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime dateTime = Date.SelectedDate.Value;
+            student.SetDate(dateTime);
             UpdateStudentInfo();
         }
     }
