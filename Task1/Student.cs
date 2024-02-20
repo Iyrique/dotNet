@@ -6,34 +6,34 @@ namespace Task1
 {
     public class Student
     {
-        private string lastName { set; get; }
-        private string firstName { set; get; }
-        private DateTime dateOfBirthday { set; get; }
-        private Dictionary<int, Dictionary<string, int>> gradesBySemester { set; get; }
-        private int course { set; get; }
-        private string group { set; get; }
-        private Dictionary<int, List<string>> subjectsBySemester { set; get; }
+        public string LastName;
+        public string FirstName;
+        public DateTime DateOfBirthday;
+        public Dictionary<int, Dictionary<string, int>> GradesBySemester;
+        public int Course;
+        public string Group;
+        public Dictionary<int, List<string>> SubjectsBySemester;
 
         public Student(string lastName, string firstName, DateTime dateOfBirthday, int course, string group, Dictionary<int, List<string>> subjectsBySemester)
         {
-            this.lastName = lastName;
-            this.firstName = firstName;
-            this.dateOfBirthday = dateOfBirthday;
-            this.course = course;
-            this.group = group;
-            this.subjectsBySemester = subjectsBySemester;
-            this.gradesBySemester = InitializeGradesBySemester(this.subjectsBySemester);
+            this.LastName = lastName;
+            this.FirstName = firstName;
+            this.DateOfBirthday = dateOfBirthday;
+            this.Course = course;
+            this.Group = group;
+            this.SubjectsBySemester = subjectsBySemester;
+            this.GradesBySemester = InitializeGradesBySemester(this.SubjectsBySemester);
         }
 
         public Student(string lastName, string firstName, DateTime dateOfBirthday, int course, string group)
         {
-            this.lastName = lastName;
-            this.firstName = firstName;
-            this.dateOfBirthday = dateOfBirthday;
-            this.course = course;
-            this.group = group;
-            this.subjectsBySemester = new Dictionary<int, List<string>>();
-            this.gradesBySemester = new Dictionary<int, Dictionary<string, int>>();
+            this.LastName = lastName;
+            this.FirstName = firstName;
+            this.DateOfBirthday = dateOfBirthday;
+            this.Course = course;
+            this.Group = group;
+            this.SubjectsBySemester = new Dictionary<int, List<string>>();
+            this.GradesBySemester = new Dictionary<int, Dictionary<string, int>>();
         }
 
         private Dictionary<int, Dictionary<string, int>> InitializeGradesBySemester(Dictionary<int, List<string>> subjectsBySemester)
@@ -53,13 +53,13 @@ namespace Task1
 
         public double CalculateAverageGrade(string subject)
         {
-            if (gradesBySemester.Count == 0)
+            if (GradesBySemester.Count == 0)
                 return 0;
 
             double totalGrade = 0;
             int totalSubjects = 0;
 
-            foreach (var semesterGrades in gradesBySemester)
+            foreach (var semesterGrades in GradesBySemester)
             {
                 if (semesterGrades.Value.ContainsKey(subject))
                 {
@@ -78,7 +78,7 @@ namespace Task1
         {
             List<string> subjectsWithDebt = new List<string>();
 
-            foreach (var semesterGrades in gradesBySemester)
+            foreach (var semesterGrades in GradesBySemester)
             {
                 foreach (var grade in semesterGrades.Value)
                 {
@@ -94,13 +94,13 @@ namespace Task1
 
         public double CalculateAverageGradeForAllSubjects()
         {
-            if (gradesBySemester.Count == 0)
+            if (GradesBySemester.Count == 0)
                 return 0;
 
             double totalGrade = 0;
             int totalSubjects = 0;
 
-            foreach (var semesterGrades in gradesBySemester)
+            foreach (var semesterGrades in GradesBySemester)
             {
                 totalGrade += semesterGrades.Value.Sum(g => g.Value);
                 totalSubjects += semesterGrades.Value.Count;
@@ -114,10 +114,10 @@ namespace Task1
 
         public double CalculateAverageGradeForSemester(int semester)
         {
-            if (!gradesBySemester.ContainsKey(semester))
+            if (!GradesBySemester.ContainsKey(semester))
                 return 0;
 
-            var semesterGrades = gradesBySemester[semester];
+            var semesterGrades = GradesBySemester[semester];
 
             if (semesterGrades.Count == 0)
                 return 0;
@@ -126,5 +126,6 @@ namespace Task1
             return totalGrade / semesterGrades.Count;
         }
 
+        
     }
 }

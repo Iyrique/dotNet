@@ -23,6 +23,11 @@ namespace Task1
         public MainWindow()
         {
             InitializeComponent();
+           
+            
+            
         }
+
+        
     }
 }
