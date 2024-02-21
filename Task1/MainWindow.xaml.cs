@@ -33,6 +33,8 @@ namespace Task1
             Course.Text = student.GetCourse().ToString();
             Group.Text = student.GetGroup();
             Date.SelectedDate = student.GetDate();
+            TextBox.Text = "Сюда вводить текст!";
+            TextBlock.Text = "Здесь будет результат!";
         }
 
         private void UpdateStudentInfo()
@@ -74,6 +76,22 @@ namespace Task1
             DateTime dateTime = Date.SelectedDate.Value;
             student.SetDate(dateTime);
             UpdateStudentInfo();
+        }
+
+        private void DebtButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock.Text = student.SubjectsWithDept();
+        }
+
+        private void AverageAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock.Text = student.CountAverageForAllSubjects().ToString();
+        }
+
+        private void AverageSubjectButton_Click(object sender, RoutedEventArgs e)
+        {
+            string subject = TextBox.Text;
+            TextBlock.Text = student.AverageForSubject(subject).ToString();
         }
     }
 }

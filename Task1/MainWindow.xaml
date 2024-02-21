@@ -24,5 +24,10 @@
         <Button x:Name="GroupButton" Content="Change group" Margin="484,95,0,0" VerticalAlignment="Top" Width="120" Click="GroupButton_Click" Height="23" HorizontalAlignment="Left"/>
         <DatePicker x:Name="Date" Margin="634,62,0,0" VerticalAlignment="Top" IsTodayHighlighted="True" SelectedDateFormat="Long" Width="120" Height="27" HorizontalAlignment="Left"/>
         <Button x:Name="DateButton" Content="Change birthday" Margin="634,95,0,0" VerticalAlignment="Top" Width="120" Click="DateButton_Click" Height="23" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="TextBlock" HorizontalAlignment="Left" Margin="245,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="287" Width="537"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="32" Margin="30,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="210"/>
+        <Button x:Name="AverageSubjectButton" Content="Средняя по предмету" HorizontalAlignment="Left" Margin="59,183,0,0" VerticalAlignment="Top" Width="141" Height="23" Click="AverageSubjectButton_Click"/>
+        <Button x:Name="AverageAllButton" Content="Среднее по всему" HorizontalAlignment="Left" Margin="59,256,0,0" VerticalAlignment="Top" Width="141" Height="28" Click="AverageAllButton_Click"/>
+        <Button x:Name="DebtButton" Content="Задолжности" HorizontalAlignment="Left" Margin="59,350,0,0" VerticalAlignment="Top" Width="141" Height="21" Click="DebtButton_Click"/>
     </Grid>
 </Window>
