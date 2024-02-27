@@ -96,7 +96,6 @@ namespace Task1
         public string SubjectsWithDept()
         {
             List<string> ans = student.GetSubjectsWithDebt();
-            // Преобразуем список в строку, разделяя предметы запятой
             string result = string.Join("\n", ans);
             return result;
         }
