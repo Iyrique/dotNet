@@ -55,10 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\DogViewModel.cs" />
+    <Compile Include="ViewModels\PantherViewModel.cs" />
+    <Compile Include="ViewModels\TurtleViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Animals\Animal.cs" />
+    <Compile Include="Animals\Dog.cs" />
+    <Compile Include="Animals\Panther.cs" />
+    <Compile Include="Animals\Turtle.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

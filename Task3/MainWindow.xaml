@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Animals" Height="500" Width="800">
+    <Grid Margin="0,0,0,-101">
+        <StackPanel Margin="20">
+            <TextBlock Text="Panther" FontSize="20" Margin="0,0,0,10"/>
+            <TextBlock Text="{Binding SpeedText}" Margin="0,0,0,10"/>
+            <Button Content="Move" Click="MoveButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Stand" Click="StandButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Say" Click="RoarButton_Click" Margin="0,0,0,10"/>
+            <Button Content="ClimbTree" Click="ClimbTreeButton_Click"/>
+            <StackPanel Height="394" Width="760">
+                <TextBlock Text="Dog" FontSize="20" Margin="0,0,0,10"/>
+                <TextBlock Text="{Binding SpeedTextDog}" Margin="0,0,0,10"/>
+                <Button Content="Move" Click="MoveButton_ClickDog" Margin="0,0,0,10"/>
+                <Button Content="Stand" Click="StandButton_ClickDog" Margin="0,0,0,10"/>
+                <Button Content="Say" Click="RoarButton_ClickDog" Margin="0,0,0,10"/>
+                <StackPanel Height="394" Width="760">
+                    <TextBlock Text="Turtle" FontSize="20" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding SpeedTextTurtle}" Margin="0,0,0,10"/>
+                    <Button Content="Move" Click="MoveButton_ClickTurtle" Margin="0,0,0,10"/>
+                    <Button Content="Stand" Click="StandButton_ClickTurtle" Margin="0,0,0,10"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
